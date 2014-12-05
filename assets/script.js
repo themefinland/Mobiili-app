@@ -7,8 +7,9 @@ setInterval(function(){
 },50);
 
 
-
 });
+
+
 //Clickien määrän laskeminen
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
