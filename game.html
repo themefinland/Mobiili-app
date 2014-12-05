@@ -3,7 +3,7 @@
 <title>MUNA</title>
 <script src="./assets/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script> <!-- scripti josta haetaan taustan kääntymis funktio  !-->
-	<script src="./assets/scripts.js"></script>
+<script src="./assets/scripts.js"></script>
 <link href="./assets/tyylittely.css" rel="stylesheet" />
 </head>
 <body>
@@ -11,11 +11,20 @@
 
 	<p id="laskuri">Click the egg to break it!</p>
 	<div>
+	
+	<div>
 	<img id="sormi" src="assets/images/handOfDoom.gif">
 	</div>
 	<img id="planet" src="assets/images/planet.png">
-	<div>  
+	
+	<a onclick="clickCounter()">
 	<img id="muna" src="assets/images/muna.png">
+	</a>
+	<!-- paragraph id="result" sisään tulee klikkausten määrä. -->
+	<p id="result"></p>
+	<!--Seuraava nappi tyhjentää localstoragen. Sen voi poistaa lopullisesta applikaatiosta
+	mutta testatessa näppärä-->
+	<button id="nappi2" onclick="clearLS()" type="button">Aloita peli alusta (tyhjenn&auml klickit)!</button>
 	</div>
 	
 </div>
