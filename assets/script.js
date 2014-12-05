@@ -1,10 +1,56 @@
 $(document).ready(function(){
-
-var angle = 0;
+//------------kääntymis funktio
+var angle = 0;				
 setInterval(function(){
       angle+=0.05;
      $("#tausta").rotate(angle);
 },50);
+
+//----------------käntymis funktio
+
+//--------------- Sormen ja munan liikkumis funktiot
+	function animatethis(targetElement, speed) {
+    $(targetElement).animate({ marginLeft: "+=250px"},
+    {
+        duration: speed,
+        complete: function ()
+        {
+            targetElement.animate({ marginLeft: "-=250px" },
+            {
+                duration: speed,
+                complete: function ()
+                {
+                    animatethis(targetElement, speed);
+                }
+            });
+        }
+    });
+};
+
+
+	function animatethisUp(targetElement, speed) {
+    $(targetElement).animate({ marginBottom: "+=10px"},
+    {
+        duration: speed,
+        complete: function ()
+        {
+            targetElement.animate({ marginBottom: "-=10px" },
+            {
+                duration: speed,
+                complete: function ()
+                {
+                    animatethisUp(targetElement, speed);
+                }
+            });
+        }
+    });
+};
+//-- sormen ja munan liikkumis funktiot
+
+
+animatethis($('#sormi'), 5000);	
+
+animatethisUp($('#muna'), 1000);	
 
 
 });
@@ -46,4 +92,6 @@ function clearLS(){
 	 document.getElementById("result").innerHTML = "Aloita peli n&aumlp&aumlytt&aumlm&aumlll&auml munaa!";	
 	 
 }
+
+
 
