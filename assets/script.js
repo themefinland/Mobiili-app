@@ -52,6 +52,25 @@ animatethis($('#sormi'), 5000);
 
 animatethisUp($('#muna'), 1000);	
 
+						// tarkasta tämä funktio joka kerta kun sivu ladataan
+						
+		if(localStorage.clickcount < 20 ){
+		      //muuta elementin, jonka id="tonni", scr - attribuutti halutuksi
+			document.getElementById("muna").setAttribute("src", "assets/images/muna.png");
+		}
+
+		if(localStorage.clickcount >=20 && localStorage.clickcount < 30 ){
+		      //muuta elementin, jonka id="tonni", scr - attribuutti halutuksi
+			document.getElementById("muna").setAttribute("src", "http://media.giphy.com/media/Zg7clvqHE3CdW/giphy.gif");
+		}
+		if(localStorage.clickcount >= 30 && localStorage.clickcount < 50 ){
+				}
+		if(localStorage.clickcount > 50 && localStorage.clickcount < 60 ){
+		 
+		}
+		if(localStorage.clickcount==60){
+
+		}
 
 });
 
@@ -71,16 +90,16 @@ function clickCounter() {
     	  }
 		//tästä eteenpäin määritellään klikkirajoja, joiden jälkeen määriteltyjä asioita tapahtuu
 		//Jos localstorageen kerääntynyt klikkimäärä on suurempi kuin 20
-		if(localStorage.clickcount>20){
+		if(localStorage.clickcount==20){
 		      //muuta elementin, jonka id="tonni", scr - attribuutti halutuksi
-			document.getElementById("tonni").setAttribute("src", "http://media.giphy.com/media/Zg7clvqHE3CdW/giphy.gif");
+			document.getElementById("muna").setAttribute("src", "http://media.giphy.com/media/Zg7clvqHE3CdW/giphy.gif");
 		}
-		if(localStorage.clickcount>30){
+		if(localStorage.clickcount==30){
 				}
-		if(localStorage.clickcount>50){
+		if(localStorage.clickcount==50){
 		 
 		}
-		if(localStorage.clickcount>60){
+		if(localStorage.clickcount==60){
 
 		}
 }
@@ -89,9 +108,5 @@ function clickCounter() {
 //Seuraavan funktion sisään voi määritellä kaikki ne asiat, jotka haluaa tapahtuvan, kun peli aloitetaan alusta.
 function clearLS(){
 	 localStorage.clear();
-	 document.getElementById("result").innerHTML = "Aloita peli n&aumlp&aumlytt&aumlm&aumlll&auml munaa!";	
-	 
-}
-
-
-
+	 document.getElementById("result").innerHTML = "Aloita peli n&aumlp&aumlytt&aumlm&aumlll&auml munaa!";
+	 document.getElementById("muna").setAttribute("src", "assets/images/muna.png");
