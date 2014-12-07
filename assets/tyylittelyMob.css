@@ -1,0 +1,112 @@
+body{
+background-image: url("./images/gameBG.png");
+position: fixed;
+background-position: center; 
+min-height: 100%;
+min-height: 100%;
+background-repeat: no-repeat;
+}
+
+#container{
+
+}
+
+#tausta{
+  position: fixed;
+	z-index: -100;
+width: auto;
+    height: auto;
+}
+#laskuri{
+z-index: +1;
+position: fixed;
+    margin: auto;
+    top: 0%;
+    left: 40%;
+    right: 0;
+    bottom: 0%;
+}
+#planet{
+z-index: -1;
+position: fixed;
+    margin: auto;
+    top: 0%;
+    left: 0%;
+    right: 0;
+    bottom: 0%;
+}
+
+#clickArea{
+	-moz-border-radius: 50px /100px;
+	-webkit-border-radius: 200px / 50px;
+}
+
+#muna{
+ margin: auto;
+position: fixed;
+	    top: 0%;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+	background-color:rgba(255,0,0,0.1);
+
+}
+#sormi{
+position: fixed;
+    margin: auto;
+	    top: 0%;
+    left: 20%;
+    right: 0;
+    bottom: 0;
+width: 10%;
+z-index: 0;
+}
+
+#nappi2{
+
+
+}
+
+#result{
+
+padding-top:400px;
+
+}
+
+#confirmTest{
+z-index: 9003;
+}
+
+
+#blanket {
+position: fixed;
+    margin: auto;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+   background-color:#111;
+   opacity: 0.65;
+   *background:none;
+   z-index: 9001;
+   width:80%;
+}
+
+#popUpDiv {
+	position:fixed;
+	 margin: auto;
+	top: 70%;
+    left: 90%;
+    right: 40%;
+    bottom: 50%;
+	background:url(pop-back.jpg) no-repeat;
+	width:150%;
+	border:5px solid #000;
+	z-index: 9002;
+}
+
+#popUpDiv {position:absolute; top:20px; left:20px}
+
+#keskitys{
+
+}
