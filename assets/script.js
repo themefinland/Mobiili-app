@@ -8,17 +8,17 @@ $("#closeLink, #resetLink").click( function () { popup('popUpDiv')});
 $("#resetLink").click( function () { clearLS()});
 
 //------------kääntymis funktio
-/*var angle = 0;				
+var angle = 0;				
 setInterval(function(){
-      angle+=0.02;
+      angle+=0.2;
      $("#pilvet1").rotate(angle);
-},1000);
+},50);
 
 setInterval(function(){
-      angle+=0.03;
+      angle+=0.3;
      $("#pilvet2").rotate(angle);
-},1000);
-*/
+},50);
+
 //----------------käntymis funktio
 
 //--------------- Sormen ja munan liikkumis funktiot
@@ -60,10 +60,8 @@ setInterval(function(){
 };
 //-- sormen ja munan liikkumis funktiot
 
-animatethisUp($('#pilvet1'), 1000);	
-animatethisUp($('#pilvet2'), 2000);
-animatethisUp($('#planet'), 5000);
-animatethisUp($('#muna'), 5000);
+
+
 
 
 					// kutsutään tämä funktio sivua ladatessa jotta munan status tarkastetaan kun käyttäjä tulee takaisin sivulle
@@ -114,7 +112,7 @@ function clickCounter() {
 		if(localStorage.clickcount==20){
 		      //muuta elementin, jonka id="tonni", scr - attribuutti halutuksi
 			document.getElementById("muna").setAttribute("src", "assets/images/muna2.png");
-			document.getElementById("sormi").setAttribute("src", "assets/images/fingerOfDoom.png");
+			document.getElementById("sormi").setAttribute("src", "assets/images/fingerOfDeath.png");
 			toggle('sormi');
 		}
 		if(localStorage.clickcount==40){
@@ -150,19 +148,3 @@ function popup(windowname) {
 	
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
