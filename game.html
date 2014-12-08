@@ -4,39 +4,37 @@
 <script src="./assets/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script> <!-- scripti josta haetaan taustan kääntymis funktio  !-->
 <script src="./assets/scripts.js"></script>
-<link href="./assets/tyylittely.css" rel="stylesheet" />
-<link rel="stylesheet" media="(max-width:700px)" href="./assets/tyylittelyMob.css">
-<link rel="stylesheet" media="(min-width:700px)" href="./CSS/tyylittelyDesk.css">
+<link rel="stylesheet" media="(max-width:1000px)" href="./assets/tyylittelyMob.css">
+<link rel="stylesheet" media="(min-width:1000px)" href="./assets/tyylittelyDesk.css">
 </head>
 <body>
-<div id="container">
+
+
+
     <div id="blanket" style="display:none;">	</div>
 	<div id="popUpDiv" style="display:none;">
-								<p id="confirmText" style="margin:auto; width:90%; height:90%;"> Are ya sure you want to reset your clicks?</p>			<!-- objektit pop-upin sisällä -->
-								<a href="#" id="closeLink" style="float:left;" >Nah!</a>
-								<a href="#" id="resetLink" style="float:right;" > Yup!</a>
+								<p id="confirmText" style="margin:auto; width:90%; height:40%;"> Are ya sure you want to reset your clicks?</p><!-- objektit pop-upin sisällä -->
+								<div id="invisiBlock" > </div>
+								<a href="#" id="closeLink" style="float:left; height:30%; width:50%;" >Nah!</a>
+								<a href="#" id="resetLink" style="float:right;height:30%; width:50%;" > Yup!</a>
     </div>	
 	
 
+	<div id="container">
+	<img id="pilvet1" src="assets/images/clouds.png" style="">
+	<img id="pilvet2" src="assets/images/clouds2.png" style="">
+					<img id="sormi" src="assets/images/fingerOfDoom.png" style="display:none">
+										<a id="clickArea" onclick="clickCounter()">
+											<img id="muna" src="assets/images/muna.png">
+										</a>
+					<img id="planet" src="assets/images/planet.png">
+					<!-- paragraph id="result" sisään tulee klikkausten määrä. -->
+					<p id="result"></p>
+					<!--Seuraava nappi tyhjentää localstoragen. Sen voi poistaa lopullisesta applikaatiosta
+					mutta testatessa näppärä-->
+					<button id="nappi2" onclick="popup('popUpDiv')" type="button">Aloita peli alusta (tyhjenn&auml klickit)!</button>
 	
-	<div>
-	<img id="sormi" src="assets/images/handOfDoom.gif">
 	</div>
-	<img id="planet" src="assets/images/planet.png">
 	
-	<a id="clickArea" onclick="clickCounter()">
-				
-					<img id="muna" src="assets/images/muna.png">
-	</a>
-	<!-- paragraph id="result" sisään tulee klikkausten määrä. -->
-	<p id="result"></p>
-	<!--Seuraava nappi tyhjentää localstoragen. Sen voi poistaa lopullisesta applikaatiosta
-	mutta testatessa näppärä-->
-	<button id="nappi2" onclick="popup('popUpDiv')" type="button">Aloita peli alusta (tyhjenn&auml klickit)!</button>
-	</div>
-	
-	
-	
-</div>
 </body>
 </html>
