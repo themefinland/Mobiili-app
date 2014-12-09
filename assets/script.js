@@ -22,12 +22,12 @@ setInterval(function(){
 
 //--------------- Sormen ja munan liikkumis funktiot
 	function animatethis(targetElement, speed) {
-    $(targetElement).animate({ Left: "+=15%"},
+    $(targetElement).animate({ left: "+=15%"},
     {
         duration: speed,
         complete: function ()
         {
-            targetElement.animate({ Left: "-=15%" },
+            targetElement.animate({ left: "-=15%" },
             {
                 duration: speed,
                 complete: function ()
@@ -163,7 +163,31 @@ function clickCounter() {
 		 document.getElementById("sormi").style.opacity = "1";	
 		 document.getElementById("muna").setAttribute("src", "assets/images/Muna4.png");
 		}
-		if(localStorage.clickcount > 150){																						console.log(randomi);
+		if(localStorage.clickcount > 150){
+		
+																							document.getElementById("muna").setAttribute("src", "assets/images/Muna999.png");
+																							 document.getElementById("result").innerHTML = localStorage.clickcount + " You are winrar!!";
+																							 document.getElementById("laser").style.display = "inline";
+																							 document.getElementById("laserBeam").style.display = "none";
+																							document.getElementById("sormi").style.opacity = "0";
+																							$('#winRar').fadeIn(3000);
+																							
+																							
+																								var  randomi = Math.floor ((Math.random() * 10) +1);
+																									document.getElementById("prize").style.display = "inline";
+																									$("#prize").animate({minHeight:"30%", minWidth:"30%",paddingBottom:"40%"});
+																									if (randomi < 3){
+																								   document.getElementById("prize").setAttribute("src", "assets/images/fingerOfDoom.png");
+																								   
+																								   }
+																								  else if (randomi < 6 && randomi >= 3){
+																								   document.getElementById("prize").setAttribute("src", "assets/images/fistOfDeath.png");
+																								   }
+																								   else{
+																								   document.getElementById("prize").setAttribute("src", "assets/images/muna.png");
+																								   }
+																				   
+																								console.log(randomi);
 		}
 }
 
