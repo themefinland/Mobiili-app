@@ -22,12 +22,12 @@ setInterval(function(){
 
 //--------------- Sormen ja munan liikkumis funktiot
 	function animatethis(targetElement, speed) {
-    $(targetElement).animate({ marginLeft: "+=15%"},
+    $(targetElement).animate({ Left: "+=15%"},
     {
         duration: speed,
         complete: function ()
         {
-            targetElement.animate({ marginLeft: "-=15%" },
+            targetElement.animate({ Left: "-=15%" },
             {
                 duration: speed,
                 complete: function ()
@@ -41,12 +41,12 @@ setInterval(function(){
 
 
 	function animatethisUp(targetElement, speed) {
-    $(targetElement).animate({ marginBottom: "+=10px"},
+    $(targetElement).animate({ bottom: "+=5%"},
     {
         duration: speed,
         complete: function ()
         {
-            targetElement.animate({ marginBottom: "-=10px" },
+            targetElement.animate({ bottom: "-=5%" },
             {
                 duration: speed,
                 complete: function ()
@@ -64,12 +64,16 @@ setInterval(function(){
 
 					// kutsutään tämä funktio sivua ladatessa jotta munan status tarkastetaan kun käyttäjä tulee takaisin sivulle
 					// nämä funktiot määräävät enimmäkseen mitä tapahtuu kun käyttäjä on klikannut tarpeeksi
-													
+													setInterval(function(){
+													$('#stars').fadeIn(1000).delay(3000).fadeOut(3000);
+													$('#stars2').fadeIn(6000).delay(0000).fadeOut(1000);
 
+													}, 7000);
+													animatethisUp($('#aurinko'), 3000);	
+													animatethisUp($('#kuu'), 4000);	
 													animatethisUp($('#pilvet1'), 1000);	
 													animatethisUp($('#pilvet2'), 2000);
 													animatethisUp($('#planet'), 5000);
-													animatethisUp($('#muna'), 5000);
 													animatethis($('#sormi'), 1000);	
 														setInterval(function () {
 																	  if(localStorage.clickcount >=20 && localStorage.clickcount <= 40 ){
@@ -159,31 +163,7 @@ function clickCounter() {
 		 document.getElementById("sormi").style.opacity = "1";	
 		 document.getElementById("muna").setAttribute("src", "assets/images/Muna4.png");
 		}
-		if(localStorage.clickcount > 150){
-		
-																							document.getElementById("muna").setAttribute("src", "assets/images/Muna999.png");
-																							 document.getElementById("result").innerHTML = localStorage.clickcount + " You are winrar!!";
-																							 document.getElementById("laser").style.display = "inline";
-																							 document.getElementById("laserBeam").style.display = "none";
-																							document.getElementById("sormi").style.opacity = "0";
-																							$('#winRar').fadeIn(3000);
-																							
-																							
-																								var  randomi = Math.floor ((Math.random() * 10) +1);
-																									document.getElementById("prize").style.display = "inline";
-																									$("#prize").animate({minHeight:"30%", minWidth:"30%",paddingBottom:"40%"});
-																									if (randomi < 3){
-																								   document.getElementById("prize").setAttribute("src", "assets/images/fingerOfDoom.png");
-																								   
-																								   }
-																								  else if (randomi < 6 && randomi >= 3){
-																								   document.getElementById("prize").setAttribute("src", "assets/images/fistOfDeath.png");
-																								   }
-																								   else{
-																								   document.getElementById("prize").setAttribute("src", "assets/images/muna.png");
-																								   }
-																				   
-																								console.log(randomi);
+		if(localStorage.clickcount > 150){																						console.log(randomi);
 		}
 }
 
@@ -212,22 +192,3 @@ function popup(windowname) {
 	toggle('blanket');
 	toggle(windowname);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
