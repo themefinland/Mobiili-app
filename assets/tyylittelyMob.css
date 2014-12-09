@@ -90,6 +90,7 @@ position: fixed;
 	width:80%;
 	height:5%;
 	opacity:0.5;
+		font-size: 4vw;
 }
 
 #result{
@@ -150,7 +151,7 @@ position: fixed;
 background-color: white;
 text-decoration: none;
 	text-align: center;
-  line-height: 300%;
+  line-height: 200%;
   	-moz-border-radius: 50px /100px;
 	-webkit-border-radius: 200px / 200px;
 	font-size: 4vw;
