@@ -3,27 +3,32 @@
 <title>MUNA</title>
 <link rel="stylesheet" media="(max-width:1000px)" href="./assets/tyylittelyMob.css">
 <link rel="stylesheet" media="(min-width:1000px)" href="./assets/tyylittelyDesk.css">
+<!-- poistetaan 300ms tap delay ensin androidista, sitten iosista -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- iosista 300ms tap delay poistetaan fastclick.js komponentilla --->
+<script type='application/javascript' src='./assets/fastclick.js'></script>
 <script src="./assets/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script> <!-- scripti josta haetaan taustan kääntymis funktio  !-->
 <script src="./assets/scripts.js"></script>
-
 </head>
+
+<!-- klikatessa toistettava kappale -->
+<audio id="audiotag1" src="01.wav" preload="auto"></audio>
 <body>
-
-
 <div id="winRar"  style=""> </div>
-<img id="prize" src="assets/images/Muna.png">
+<img id="prize" src="assets/images/dummy.png">
     <div id="blanket" style="display:none;">	</div>
 	<div id="popUpDiv" style="display:none;">
-								<p id="confirmText" style="margin:auto; width:90%; height:40%;"> Are ya sure you want to reset your clicks?</p><!-- objektit pop-upin sisällä -->
-								<div id="invisiBlock" > </div>
-								<a href="#" id="closeLink" style="float:left; height:30%; width:50%;" >Nah!</a>
-								<a href="#" id="resetLink" style="float:right;height:30%; width:50%;" > Yup!</a>
+		<p id="confirmText" style="margin:auto; width:90%; height:40%;"> Are ya sure you want to reset your clicks?</p><!-- objektit pop-upin sisällä -->
+	<div id="invisiBlock" > </div>
+		<a href="#" id="closeLink" style="float:left; height:30%; width:50%;" >Nah!</a>
+		<a href="#" id="resetLink" style="float:right;height:30%; width:50%;" > Yup!</a>
     </div>	
 	
 
 	<div id="container">
 
-										<a id="clickArea" onclick="clickCounter()">
+										<a id="clickArea" onClick="clickCounter()">
 											<img id="muna" src="assets/images/Muna.png">
 										</a>
 					<!-- paragraph id="result" sisään tulee klikkausten määrä. -->
@@ -31,17 +36,19 @@
 					
 					<!--Seuraava nappi tyhjentää localstoragen. Sen voi poistaa lopullisesta applikaatiosta
 					mutta testatessa näppärä-->
-					<button id="nappi2" onclick="popup('popUpDiv')" type="button">Aloita peli alusta (tyhjenn&auml klickit)!</button>
-		<img id="laser" src="assets/images/laserGun.png" style="">
+					<button id="nappi2" onClick="popup('popUpDiv')" type="button">Aloita peli alusta!</button>
+
+        <img id="laser" src="assets/images/laserGun.png" style="">
 	<canvas id="laserBeam" width="2000" height="1" style="border:1px solid #d3d3d3;">
 	</div>
 
 	<img id="sormi" src="assets/images/fingerOfDoom.png" style="">
 		<img id="pilvet1" src="assets/images/clouds.png" style="">
 	<img id="pilvet2" src="assets/images/clouds2.png" style="">
-	<img id="aurinko" src="assets/images/aurinko.png" style="">
+    <img id="aurinko" src="assets/images/aurinko.png" style="">
 	<img id="kuu" src="assets/images/kuu.png" style="">
 	<img id="stars" src="assets/images/stars.png" style="">
 	<img id="stars2" src="assets/images/stars2.png" style="">
+ 
 </body>
 </html>
